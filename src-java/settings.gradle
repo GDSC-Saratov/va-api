@@ -1,0 +1,4 @@
+rootProject.name = 'va-api'
+
+include 'gateway'
+include 'persistence'
