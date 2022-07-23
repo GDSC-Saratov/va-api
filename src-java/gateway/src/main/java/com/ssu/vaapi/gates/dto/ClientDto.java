@@ -1,11 +1,13 @@
-package com.ssu.vaapi.gateway.dto;
+package com.ssu.vaapi.gates.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 
 @Builder
 @AllArgsConstructor
-public class UserDto {
-    String name;
+@Getter
+public class ClientDto {
     String username;
+    String password;
 }

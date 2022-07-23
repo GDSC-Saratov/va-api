@@ -1,5 +1,7 @@
 package com.ssu.vaapi.persistence.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,12 +11,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
 @Getter
+@Builder
 @NoArgsConstructor
-public class User extends AbstractEntity {
+@AllArgsConstructor
+@Entity
+public class Client extends AbstractEntity {
 
-    public User(String username, String password) {
+    public Client(String username, String password) {
         this.username = username;
         this.password = password;
     }

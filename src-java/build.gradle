@@ -24,19 +24,16 @@ subprojects {
 
     repositories {
         mavenCentral()
-        maven { url 'https://clojars.org/repo' }
     }
 
     dependencies {
-        // Spring boot dependencies
-        implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.springframework.boot:spring-boot-starter-security'
         implementation 'org.springframework.boot:spring-boot-starter-web'
-        // Lombok dependencies
-        compileOnly 'org.projectlombok:lombok:1.18.24'
-        annotationProcessor 'org.projectlombok:lombok:1.18.24'
-
-        testCompileOnly 'org.projectlombok:lombok:1.18.24'
-        testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'org.springframework.security:spring-security-test'
     }
 
     checkstyle {
