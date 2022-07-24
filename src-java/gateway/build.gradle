@@ -17,5 +17,5 @@ dependencies {
 }
 
 application {
-	mainClassName = "com.ssu.vaapi.gateway.VoiceAssistantApi"
+	mainClassName = "com.ssu.vaapi.gates.VoiceAssistantApi"
 }
