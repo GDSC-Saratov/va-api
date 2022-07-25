@@ -1,0 +1,21 @@
+
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'checkstyle'
+	id 'application'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation project(':persistence')
+	implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+}
+
+application {
+	mainClassName = "com.ssu.vaapi.gates.VoiceAssistantApi"
+}

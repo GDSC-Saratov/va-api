@@ -1,0 +1,8 @@
+---
+applications:
+- name: va-api
+  memory: 256M
+  instances: 1
+  host: va-api
+  domain: ssu.va-api.io
+  path: build/libs/va-api.jar

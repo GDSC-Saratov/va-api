@@ -1,0 +1,51 @@
+
+plugins {
+    id "application"
+}
+
+allprojects {
+    group = 'com.ssu'
+    version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'checkstyle'
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'org.springframework.security:spring-security-test'
+    }
+
+    checkstyle {
+        toolVersion '7.8.1'
+        configFile file("../checkstyle/checkstyle.xml")
+    }
+
+    checkstyleMain {
+        source = 'src/main/java'
+    }
+
+    checkstyleTest {
+        source = 'src/test/java'
+    }
+}
