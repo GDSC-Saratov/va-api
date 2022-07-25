@@ -34,6 +34,6 @@ public class ClientServiceImpl implements ClientService {
                 .password(encPassword)
                 .build();
 
-        return CompletableFuture.supplyAsync(() -> repository.addUser(client));
+        return CompletableFuture.supplyAsync(() -> repository.addClient(client));
     }
 }

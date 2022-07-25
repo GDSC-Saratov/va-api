@@ -40,7 +40,6 @@ public class AppConfigImpl implements AppConfig {
         return metadata.buildSessionFactory();
     }
 
-
     @Value("${persistence.username:va-api}")
     private String username;
 

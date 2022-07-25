@@ -22,7 +22,7 @@ public class ClientRepository {
         this.sessionFactory = config.getFactory();
     }
 
-    public Client addUser(Client client) {
+    public Client addClient(Client client) {
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
         session.persist(client);

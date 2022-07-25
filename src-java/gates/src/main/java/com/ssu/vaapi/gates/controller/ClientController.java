@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/client")
 public class ClientController {
 
     private final ClientService service;
